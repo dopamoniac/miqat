@@ -34,7 +34,7 @@ export default function Philosophy() {
   const philosophyDoor = IMAGES.philosophyDoor;
 
   return (
-    <section id="philosophy" className="py-24 md:py-36 bg-[#050505] border-t border-white/5 relative">
+    <section id="philosophy" className="py-24 md:py-36 bg-[#FAF7F2] border-t border-[#B9965B]/15 relative">
       <div className="max-w-7xl mx-auto px-6 md:px-12">
         
         {/* Upper Editorial Row containing Text and Image */}
@@ -46,26 +46,26 @@ export default function Philosophy() {
               OUR PHILOSOPHY
             </span>
             
-            <h2 className="text-3xl sm:text-4xl md:text-5xl font-serif text-[#F4EFE7] tracking-wider leading-[1.15]">
+            <h2 className="text-3xl sm:text-4xl md:text-5xl font-serif text-[#1C1814] tracking-wider leading-[1.15]">
               PILGRIMAGE DESERVES <br />
-              <span className="italic font-light text-gold-gradient">EXCELLENCE.</span>
+              <span className="italic font-light text-[#B9965B] block mt-1">EXCELLENCE.</span>
             </h2>
 
             {/* Sparkles / star divider in gold line */}
             <div className="flex items-center gap-4 py-4 max-w-sm">
               <div className="h-[0.5px] w-12 bg-[#B9965B]/40" />
               <span className="text-[#B9965B] text-xs">✦</span>
-              <div className="h-[0.5px] flex-grow bg-white/10" />
+              <div className="h-[0.5px] flex-grow bg-[#B9965B]/15" />
             </div>
 
-            <p className="text-sm md:text-base text-[#F4EFE7]/80 font-sans font-light tracking-wide leading-relaxed max-w-lg">
+            <p className="text-sm md:text-base text-[#1C1814]/80 font-sans font-light tracking-wide leading-relaxed max-w-lg">
               We believe that a sacred journey should be defined by absolute tranquility, clarity of mind, and flawless material execution. Every minute detail is crafted to honor your faith and shield you from operational noise.
             </p>
 
             <div className="pt-4">
               <a
                 href="#experiences"
-                className="group inline-flex items-center gap-2 text-xs font-sans tracking-[0.2em] text-[#B9965B] font-semibold hover:text-[#F4EFE7] transition-colors"
+                className="group inline-flex items-center gap-2 text-xs font-sans tracking-[0.2em] text-[#B9965B] font-semibold hover:text-[#1C1814] transition-colors"
               >
                 DISCOVER OUR EXPERIENCES
                 <ArrowRight size={14} className="transform group-hover:translate-x-1 transition-transform" />
@@ -75,7 +75,7 @@ export default function Philosophy() {
 
           {/* Right Side: Portrait Luxury Frame */}
           <div className="lg:col-span-6">
-            <div className="relative border border-white/10 p-2.5 bg-black/40 group overflow-hidden">
+            <div className="relative border border-[#B9965B]/15 p-2.5 bg-white group overflow-hidden">
               <div className="aspect-[4/3] bg-neutral-900 overflow-hidden relative">
                 <img
                   src={philosophyDoor}
@@ -100,10 +100,10 @@ export default function Philosophy() {
             return (
               <div
                 key={pr.title}
-                className="group border border-white/10 hover:border-[#B9965B]/50 p-8 bg-[#0c0c0c] transition-all duration-500 hover:shadow-2xl relative"
+                className="group border border-[#B9965B]/10 hover:border-[#B9965B] p-8 bg-white transition-all duration-500 hover:shadow-xl relative"
               >
                 {/* Micro outline number */}
-                <span className="absolute top-4 right-6 text-[10px] font-mono font-bold tracking-widest text-white/5 group-hover:text-[#B9965B]/15 transition-colors duration-500">
+                <span className="absolute top-4 right-6 text-[10px] font-mono font-bold tracking-widest text-[#1C1814]/5 group-hover:text-[#B9965B]/15 transition-colors duration-500">
                   0{idx + 1}
                 </span>
 
@@ -111,11 +111,11 @@ export default function Philosophy() {
                   <IconComponent size={24} strokeWidth={1} />
                 </div>
 
-                <h3 className="text-sm font-sans tracking-[0.2em] font-semibold text-[#F4EFE7] mb-3 group-hover:text-[#B9965B] transition-colors">
+                <h3 className="text-sm font-sans tracking-[0.2em] font-semibold text-[#1C1814] mb-3 group-hover:text-[#B9965B] transition-colors">
                   {pr.title}
                 </h3>
 
-                <p className="text-xs text-[#F4EFE7]/60 font-sans font-light tracking-wide leading-relaxed">
+                <p className="text-xs text-[#1C1814]/65 font-sans font-light tracking-wide leading-relaxed">
                   {pr.description}
                 </p>
               </div>

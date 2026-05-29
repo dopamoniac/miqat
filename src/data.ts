@@ -6,7 +6,7 @@
 import { Package, ConciergeService, Testimonial } from "./types";
 
 // Import images through Vite ES Module resolution
-import heroBg from "./assets/images/miqat_hero_bg_new_1779996161564.png";
+import heroBg from "./assets/images/miqat_hero_light_1780073128462.png";
 import signatureUmrah from "./assets/images/miqat_medina_dome_new_1780011408351.png";
 import royalHajj from "./assets/images/miqat_kaaba_door_new_1780011428105.png";
 import privateJourneys from "./assets/images/miqat_luxury_pethouse_new_1780011454537.png";

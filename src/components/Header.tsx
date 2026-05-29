@@ -44,8 +44,8 @@ export default function Header({ onOpenConsultation, activeSection }: HeaderProp
       <header
         className={`fixed top-0 left-0 w-full z-50 transition-all duration-500 ${
           isScrolled
-            ? "bg-[#050505]/95 backdrop-blur-md border-b border-brand-gold/10 py-4 shadow-xl"
-            : "bg-transparent py-6"
+            ? "bg-[#FAF7F2]/95 backdrop-blur-md border-b border-[#B9965B]/15 py-4 shadow-xl"
+            : "bg-[#FAF7F2]/30 backdrop-blur-sm py-6"
         }`}
       >
         <div className="max-w-7xl mx-auto px-6 md:px-12 flex items-center justify-between">
@@ -59,12 +59,12 @@ export default function Header({ onOpenConsultation, activeSection }: HeaderProp
                 <Crown size={24} strokeWidth={1.2} />
               </span>
               <span
-                className="text-2xl font-cinzel font-semibold tracking-[0.25em] text-[#F4EFE7] group-hover:text-[#B9965B] transition-colors duration-500"
+                className="text-2xl font-cinzel font-semibold tracking-[0.25em] text-[#1C1814] group-hover:text-[#B9965B] transition-colors duration-500"
               >
                 MIQAT
               </span>
             </div>
-            <span className="text-[8px] font-sans font-light tracking-[0.3em] text-[#B9965B]/80 text-center mt-1 uppercase">
+            <span className="text-[8px] font-sans font-light tracking-[0.3em] text-[#B9965B]/85 text-center mt-1 uppercase">
               LUXURY HAJJ & UMRAH EXPERIENCES
             </span>
           </div>
@@ -80,7 +80,7 @@ export default function Header({ onOpenConsultation, activeSection }: HeaderProp
                   className={`text-xs font-sans tracking-[0.2em] transition-colors duration-300 relative py-1 uppercase ${
                     isActive
                       ? "text-[#B9965B] font-medium"
-                      : "text-[#F4EFE7]/70 hover:text-[#F4EFE7]"
+                      : "text-[#1C1814]/70 hover:text-[#1C1814]"
                   }`}
                 >
                   {item.label}
@@ -97,9 +97,9 @@ export default function Header({ onOpenConsultation, activeSection }: HeaderProp
           {/* Luxury CTA Option */}
           <div className="hidden sm:flex items-center gap-6">
             <button
-              id="cta-private-consultation"
+               id="cta-private-consultation"
               onClick={() => onOpenConsultation()}
-              className="group border border-[#B9965B]/40 hover:border-[#B9965B] bg-[#B9965B]/5 hover:bg-[#B9965B]/10 px-6 py-2.5 text-[10px] tracking-[0.25em] text-[#F4EFE7] font-semibold transition-all duration-500 relative overflow-hidden"
+              className="group border border-[#B9965B]/40 hover:border-[#B9965B] bg-[#B9965B]/5 hover:bg-[#B9965B]/10 px-6 py-2.5 text-[10px] tracking-[0.25em] text-[#1C1814] font-semibold transition-all duration-500 relative overflow-hidden"
             >
               <span className="relative z-10 flex items-center gap-2">
                 <Sparkles size={12} className="text-[#B9965B]" />
@@ -111,7 +111,7 @@ export default function Header({ onOpenConsultation, activeSection }: HeaderProp
             {/* Micro Hamburguer menu for styling */}
             <button
               onClick={() => setMobileMenuOpen(true)}
-              className="lg:hidden text-[#F4EFE7] hover:text-[#B9965B] transition-colors duration-300"
+              className="lg:hidden text-[#1C1814] hover:text-[#B9965B] transition-colors duration-300"
               aria-label="Open mobile menu"
             >
               <Menu size={20} strokeWidth={1} />
@@ -121,7 +121,7 @@ export default function Header({ onOpenConsultation, activeSection }: HeaderProp
           {/* Mobile hamburger alone */}
           <button
             onClick={() => setMobileMenuOpen(true)}
-            className="sm:hidden text-[#F4EFE7] hover:text-[#B9965B] py-1 transition-colors duration-300"
+            className="sm:hidden text-[#1C1814] hover:text-[#B9965B] py-1 transition-colors duration-300"
             aria-label="Open mobile menu"
           >
             <Menu size={20} strokeWidth={1} />
@@ -131,14 +131,14 @@ export default function Header({ onOpenConsultation, activeSection }: HeaderProp
 
       {/* Mobile Sidebar overlay */}
       <div
-        className={`fixed inset-0 z-50 bg-[#050505]/98 transition-all duration-700 pointer-events-none ${
+        className={`fixed inset-0 z-50 bg-[#FAF7F2]/98 transition-all duration-700 pointer-events-none ${
           mobileMenuOpen ? "opacity-100 pointer-events-auto" : "opacity-0"
         }`}
       >
         <div className="absolute top-6 right-8">
           <button
             onClick={() => setMobileMenuOpen(false)}
-            className="text-[#F4EFE7] hover:text-[#B9965B] p-2 transition-colors duration-300"
+            className="text-[#1C1814] hover:text-[#B9965B] p-2 transition-colors duration-300"
           >
             <X size={24} strokeWidth={1} />
           </button>
@@ -155,7 +155,7 @@ export default function Header({ onOpenConsultation, activeSection }: HeaderProp
               <button
                 key={item.label}
                 onClick={() => scrollToSection(item.targetId)}
-                className="text-xl md:text-3xl font-serif tracking-widest text-[#F4EFE7] hover:text-[#B9965B] transition-colors py-1 text-left"
+                className="text-xl md:text-3xl font-serif tracking-widest text-[#1C1814] hover:text-[#B9965B] transition-colors py-1 text-left"
               >
                 {item.label}
               </button>
@@ -168,12 +168,12 @@ export default function Header({ onOpenConsultation, activeSection }: HeaderProp
                 setMobileMenuOpen(false);
                 onOpenConsultation();
               }}
-              className="w-full border border-[#B9965B] bg-[#B9965B] text-[#050505] font-semibold py-4 text-xs tracking-[0.25em] flex items-center justify-center gap-2"
+              className="w-full border border-[#B9965B] bg-[#B9965B] text-white font-semibold py-4 text-xs tracking-[0.25em] flex items-center justify-center gap-2"
             >
               <Calendar size={14} />
               BOOK CONSULTATION
             </button>
-            <span className="text-[10px] text-[#F4EFE7]/40 tracking-wider">
+            <span className="text-[10px] text-[#1C1814]/60 tracking-wider">
               RESERVED FOR FAMILIES, EXECUTIVES & DIGNITARIES DEMANDING ULTIMATE DISCRETION.
             </span>
           </div>

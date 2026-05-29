@@ -23,7 +23,7 @@ export default function Hero({ onExploreClick, onOpenConsultation }: HeroProps) 
     <>
       <section
         id="hero"
-        className="relative min-h-screen w-full flex items-center bg-[#050505] overflow-hidden"
+        className="relative min-h-screen w-full flex items-center bg-[#FAF7F2] overflow-hidden"
       >
         {/* Background Image with Cinematic Art Direction */}
         <div className="absolute inset-0 z-0">
@@ -33,10 +33,10 @@ export default function Hero({ onExploreClick, onOpenConsultation }: HeroProps) 
             className="w-full h-full object-cover object-right md:object-center transform scale-102 transition-transform duration-[10s] ease-out select-none"
             referrerPolicy="no-referrer"
           />
-          {/* Gradients: Left black vignette for text legibility, base dark shadow, bottom shadow */}
-          <div className="absolute inset-0 bg-gradient-to-r from-[#050505] via-[#050505]/85 to-[#050505]/10 md:via-[#050505]/75" />
-          <div className="absolute inset-0 bg-gradient-to-t from-[#050505] via-[#050505]/40 to-transparent" />
-          <div className="absolute top-0 left-0 right-0 h-40 bg-gradient-to-b from-[#050505] to-transparent" />
+          {/* Gradients: Left ivory vignette for text legibility, base light shadow, bottom shadow */}
+          <div className="absolute inset-0 bg-gradient-to-r from-[#FAF7F2] via-[#FAF7F2]/90 to-[#FAF7F2]/20 md:via-[#FAF7F2]/80" />
+          <div className="absolute inset-0 bg-gradient-to-t from-[#FAF7F2] via-[#FAF7F2]/40 to-transparent" />
+          <div className="absolute top-0 left-0 right-0 h-40 bg-gradient-to-b from-[#FAF7F2] to-transparent" />
         </div>
 
         {/* Content Layout */}
@@ -54,22 +54,22 @@ export default function Hero({ onExploreClick, onOpenConsultation }: HeroProps) 
               </div>
 
               {/* Huge Luxury Serif Heading */}
-              <h1 className="text-4xl sm:text-5xl md:text-7xl font-serif text-[#F4EFE7] tracking-wider leading-[1.1] mb-6 animate-slide-up">
+              <h1 className="text-4xl sm:text-5xl md:text-7xl font-serif text-[#1C1814] tracking-wider leading-[1.1] mb-6 animate-slide-up">
                 A SACRED JOURNEY,
-                <span className="block italic mt-1 text-gold-gradient font-light">
+                <span className="block italic mt-1 text-[#B9965B] font-light">
                   DESIGNED WITH PRECISION
                 </span>
               </h1>
 
               {/* Fine horizontal line with custom diamond sparkly separator */}
               <div className="flex items-center gap-4 py-4 md:py-6 max-w-lg">
-                <div className="h-[0.5px] flex-grow bg-white/10" />
+                <div className="h-[0.5px] flex-grow bg-[#B9965B]/20" />
                 <span className="text-[#B9965B] text-xs font-light">✦</span>
-                <div className="h-[0.5px] flex-grow bg-white/10" />
+                <div className="h-[0.5px] flex-grow bg-[#B9965B]/20" />
               </div>
 
               {/* Subtitle description */}
-              <p className="text-sm md:text-base text-[#F4EFE7]/80 font-sans font-light tracking-wide leading-relaxed max-w-lg mb-8 md:mb-12">
+              <p className="text-sm md:text-base text-[#1C1814]/85 font-sans font-light tracking-wide leading-relaxed max-w-lg mb-8 md:mb-12">
                 We craft bespoke Hajj & Umrah experiences with high-end precision,
                 reverence, and expert care. Let us govern every material detail so you may commit
                 fully to your sacred path.
@@ -79,17 +79,17 @@ export default function Hero({ onExploreClick, onOpenConsultation }: HeroProps) 
               <div className="flex flex-wrap items-center gap-6 md:gap-8">
                 <button
                   onClick={onExploreClick}
-                  className="bg-[#B9965B] hover:bg-[#8C6F3E] text-[#050505] px-8 py-4 text-xs font-semibold tracking-[0.25em] transition-all duration-300 transform font-sans hover:-translate-y-0.5"
+                  className="bg-[#B9965B] hover:bg-[#8C6F3E] text-white px-8 py-4 text-xs font-semibold tracking-[0.25em] transition-all duration-300 transform font-sans hover:-translate-y-0.5"
                 >
                   EXPLORE EXPERIENCES
                 </button>
 
                 <button
                   onClick={() => setVideoModalOpen(true)}
-                  className="group flex items-center gap-3 text-xs tracking-[0.2em] font-sans font-medium text-[#F4EFE7]/90 hover:text-[#F4EFE7] transition-colors"
+                  className="group flex items-center gap-3 text-xs tracking-[0.2em] font-sans font-medium text-[#1C1814]/90 hover:text-[#1C1814] transition-colors"
                 >
-                  <span className="w-10 h-10 rounded-full border border-white/20 group-hover:border-[#B9965B] flex items-center justify-center transition-all duration-300 transform group-hover:scale-105">
-                    <Play size={12} fill="#F4EFE7" className="ml-0.5 text-[#F4EFE7]" />
+                  <span className="w-10 h-10 rounded-full border border-[#B9965B]/30 group-hover:border-[#B9965B] flex items-center justify-center transition-all duration-300 transform group-hover:scale-105">
+                    <Play size={12} fill="#1C1814" className="ml-0.5 text-[#1C1814]" />
                   </span>
                   WATCH INTRO
                 </button>
@@ -98,20 +98,20 @@ export default function Hero({ onExploreClick, onOpenConsultation }: HeroProps) 
           </div>
 
           {/* Bottom Indicator row */}
-          <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-6 border-t border-white/5 pt-8">
+          <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-6 border-t border-[#B9965B]/15 pt-8">
             {/* Horizontal parameters list */}
-            <div className="flex items-center gap-4 text-[10px] font-sans tracking-[0.2em] text-[#F4EFE7]/40">
-              <span className="hover:text-[#F4EFE7] transition-colors cursor-default">PRIVATE</span>
-              <span className="h-3 w-[1px] bg-white/10" />
-              <span className="hover:text-[#F4EFE7] transition-colors cursor-default">SEAMLESS</span>
-              <span className="h-3 w-[1px] bg-white/10" />
-              <span className="hover:text-[#F4EFE7] transition-colors cursor-default">SPIRITUAL</span>
+            <div className="flex items-center gap-4 text-[10px] font-sans tracking-[0.2em] text-[#1C1814]/50">
+              <span className="hover:text-[#1C1814] transition-colors cursor-default">PRIVATE</span>
+              <span className="h-3 w-[1px] bg-[#B9965B]/20" />
+              <span className="hover:text-[#1C1814] transition-colors cursor-default">SEAMLESS</span>
+              <span className="h-3 w-[1px] bg-[#B9965B]/20" />
+              <span className="hover:text-[#1C1814] transition-colors cursor-default">SPIRITUAL</span>
             </div>
 
             {/* Mouse wheel scroll indicator */}
             <button
               onClick={onExploreClick}
-              className="flex items-center gap-3 text-left text-[9px] font-sans tracking-[0.25em] text-[#B9965B] hover:text-[#F4EFE7]/90 transition-colors"
+              className="flex items-center gap-3 text-left text-[9px] font-sans tracking-[0.25em] text-[#B9965B] hover:text-[#1C1814]/90 transition-colors"
             >
               <div className="w-5 h-8 rounded-full border border-[#B9965B]/60 flex justify-center py-1.5 opacity-85">
                 <span className="w-1 h-1.5 rounded-full bg-[#B9965B] animate-bounce" />
@@ -142,7 +142,7 @@ export default function Hero({ onExploreClick, onOpenConsultation }: HeroProps) 
                   }
                 }}
                 className={`group flex items-center gap-3 text-right bg-transparent border-0 py-1 transition-all duration-300 cursor-pointer ${
-                  indexValue === 1 ? "text-[#B9965B]" : "text-[#F4EFE7]/30"
+                  indexValue === 1 ? "text-[#B9965B]" : "text-[#1C1814]/40"
                 }`}
               >
                 <span className="text-[10px] tracking-widest font-mono opacity-0 group-hover:opacity-100 transition-opacity duration-300">
@@ -151,7 +151,7 @@ export default function Hero({ onExploreClick, onOpenConsultation }: HeroProps) 
                 <span className="text-xs font-mono font-bold tracking-wider">{sec.tag}</span>
                 <span
                   className={`h-6 w-[1.5px] transition-all duration-300 ${
-                    indexValue === 1 ? "bg-[#B9965B] h-10" : "bg-white/10 group-hover:bg-[#B9965B]/50"
+                    indexValue === 1 ? "bg-[#B9965B] h-10" : "bg-[#B9965B]/20 group-hover:bg-[#B9965B]/55"
                   }`}
                 />
               </button>

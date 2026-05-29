@@ -73,7 +73,7 @@ export default function App() {
   }, []);
 
   return (
-    <div className="bg-[#050505] text-[#F4EFE7] min-h-screen relative font-sans selection:bg-[#B9965B] selection:text-black">
+    <div className="bg-[#FAF7F2] text-[#1C1814] min-h-screen relative font-sans selection:bg-[#B9965B] selection:text-black">
       
       {/* Brand Header & Responsive Sidebars */}
       <Header onOpenConsultation={handleOpenConsultation} activeSection={activeSection} />

@@ -74,7 +74,7 @@ export default function Experiences({ onOpenConsultation }: ExperiencesProps) {
   };
 
   return (
-    <section id="experiences" className="py-24 md:py-36 bg-[#0c0c0c] border-t border-white/5 relative">
+    <section id="experiences" className="py-24 md:py-36 bg-[#FAF7F2] border-t border-[#B9965B]/15 relative">
       <div className="max-w-7xl mx-auto px-6 md:px-12">
         
         {/* Header Block and Text Slide */}
@@ -82,11 +82,11 @@ export default function Experiences({ onOpenConsultation }: ExperiencesProps) {
           <span className="text-[10px] tracking-[0.3em] font-sans font-semibold text-[#B9965B] block uppercase">
             SACRED PACKAGES
           </span>
-          <h2 className="text-3xl sm:text-4xl md:text-5xl font-serif text-[#F4EFE7] tracking-wider leading-tight">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-serif text-[#1C1814] tracking-wider leading-tight">
             Curated Journeys. <br className="sm:hidden" />
-            <span className="italic font-light text-gold-gradient">Tailored for You.</span>
+            <span className="italic font-light text-[#B9965B]">Tailored for You.</span>
           </h2>
-          <p className="text-xs md:text-sm text-[#F4EFE7]/50 max-w-lg mx-auto font-light tracking-wide leading-relaxed">
+          <p className="text-xs md:text-sm text-[#1C1814]/65 max-w-lg mx-auto font-light tracking-wide leading-relaxed">
             Choose from our three foundational frameworks, each fully custom-tailorable by our master travel butlers to fit your exact spiritual sequence.
           </p>
         </div>
@@ -96,21 +96,21 @@ export default function Experiences({ onOpenConsultation }: ExperiencesProps) {
           {PACKAGES.map((pkg) => (
             <div
               key={pkg.id}
-              className="bg-[#050505] border border-white/10 hover:border-[#B9965B]/40 transition-all duration-700 hover:shadow-2xl flex flex-col justify-between group"
+              className="bg-white border border-[#B9965B]/15 hover:border-[#B9965B] transition-all duration-700 hover:shadow-2xl flex flex-col justify-between group"
             >
               <div>
                 {/* Visual Banner */}
-                <div className="aspect-[4/3] w-full overflow-hidden relative border-b border-white/5">
+                <div className="aspect-[4/3] w-full overflow-hidden relative border-b border-[#B9965B]/15">
                   <img
                     src={pkg.image}
                     alt={pkg.name}
                     className="w-full h-full object-cover transition-transform duration-[8s] group-hover:scale-105"
                     referrerPolicy="no-referrer"
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-[#050505]/95 via-transparent to-transparent" />
+                  <div className="absolute inset-0 bg-gradient-to-t from-[#000000]/80 via-transparent to-transparent" />
                   
                   {/* Luxury Indicators */}
-                  <div className="absolute top-4 left-4 bg-[#050505]/80 backdrop-blur-sm border border-[#B9965B]/30 px-3 py-1 font-mono text-[9px] tracking-widest text-[#B9965B]">
+                  <div className="absolute top-4 left-4 bg-[#FAF7F2]/90 backdrop-blur-sm border border-[#B9965B]/30 px-3 py-1 font-mono text-[9px] tracking-widest text-[#B9965B]">
                     {pkg.number}
                   </div>
                   
@@ -118,7 +118,7 @@ export default function Experiences({ onOpenConsultation }: ExperiencesProps) {
                     <span className="text-[9px] font-sans tracking-[0.25em] text-[#B9965B] uppercase block mb-1">
                       {pkg.subtitle}
                     </span>
-                    <h3 className="text-lg font-serif text-[#F4EFE7] tracking-widest uppercase">
+                    <h3 className="text-lg font-serif text-white tracking-widest uppercase">
                       {pkg.name}
                     </h3>
                   </div>
@@ -126,11 +126,11 @@ export default function Experiences({ onOpenConsultation }: ExperiencesProps) {
 
                 {/* Body Details */}
                 <div className="p-8 space-y-6">
-                  <p className="text-xs text-[#F4EFE7]/70 font-sans tracking-wide leading-relaxed font-light">
+                  <p className="text-xs text-[#1C1814]/75 font-sans tracking-wide leading-relaxed font-light">
                     {pkg.description}
                   </p>
 
-                  <div className="h-px bg-white/5" />
+                  <div className="h-px bg-[#B9965B]/15" />
 
                   {/* Bullet points inclusions list with subtle elegant custom icons */}
                   <div className="space-y-3">
@@ -140,7 +140,7 @@ export default function Experiences({ onOpenConsultation }: ExperiencesProps) {
                     {pkg.inclusions.map((inc) => (
                       <div key={inc} className="flex items-start gap-3">
                         <span className="text-[#B9965B] text-xs pt-0.5 font-light">✦</span>
-                        <span className="text-xs font-sans font-light tracking-wide text-[#F4EFE7]/80 leading-relaxed">
+                        <span className="text-xs font-sans font-light tracking-wide text-[#1C1814]/80 leading-relaxed">
                           {inc}
                         </span>
                       </div>
@@ -153,7 +153,7 @@ export default function Experiences({ onOpenConsultation }: ExperiencesProps) {
               <div className="p-8 pt-0 mt-auto">
                 <button
                   onClick={() => onOpenConsultation(pkg.name)}
-                  className="w-full text-center border border-[#B9965B]/30 group-hover:border-[#B9965B]/75 bg-transparent group-hover:bg-[#B9965B]/5 py-3.5 text-[10px] tracking-[0.25em] text-[#F4EFE7] font-semibold transition-all duration-500 uppercase flex items-center justify-center gap-2"
+                  className="w-full text-center border border-[#B9965B]/40 hover:border-[#B9965B] bg-transparent hover:bg-[#B9965B]/5 py-3.5 text-[10px] tracking-[0.25em] text-[#1C1814] font-semibold transition-all duration-500 uppercase flex items-center justify-center gap-2"
                 >
                   VIEW EXPERIENCE 
                   <ArrowRight size={12} className="text-[#B9965B] transition-transform group-hover:translate-x-1" />
@@ -164,7 +164,7 @@ export default function Experiences({ onOpenConsultation }: ExperiencesProps) {
         </div>
 
         {/* INTERACTIVE LUXURY CURATION PYRAMID (DYNAMIC ESTIMATOR) */}
-        <div className="border border-[#B9965B]/20 bg-[#050505] p-8 md:p-12 relative overflow-hidden">
+        <div className="border border-[#B9965B]/15 bg-white p-8 md:p-12 relative overflow-hidden shadow-xl">
           {/* Subtle luxurious background accent */}
           <div className="absolute right-0 top-0 bottom-0 w-1/3 bg-gradient-to-l from-[#B9965B]/5 to-transparent pointer-events-none hidden lg:block" />
           
@@ -174,12 +174,12 @@ export default function Experiences({ onOpenConsultation }: ExperiencesProps) {
             <div className="lg:col-span-8 space-y-8">
               <div className="flex items-center gap-3">
                 <Settings2 size={16} className="text-[#B9965B]" />
-                <h3 className="text-sm font-sans tracking-[0.25em] font-semibold text-[#F4EFE7] uppercase">
+                <h3 className="text-sm font-sans tracking-[0.25em] font-semibold text-[#1C1814] uppercase">
                   CURATE YOUR SACRED PATH
                 </h3>
               </div>
               
-              <div className="h-px bg-white/5" />
+              <div className="h-px bg-[#B9965B]/15" />
 
               {/* Toggles Row 1 */}
               <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
@@ -200,8 +200,8 @@ export default function Experiences({ onOpenConsultation }: ExperiencesProps) {
                         onClick={() => setEstimateTier(tier.id as any)}
                         className={`text-left p-3 border text-xs tracking-wider transition-all duration-300 ${
                           estimateTier === tier.id
-                            ? "border-[#B9965B] bg-[#B9965B]/10 text-[#F4EFE7]"
-                            : "border-white/10 bg-transparent text-[#F4EFE7]/50 hover:border-white/20"
+                            ? "border-[#B9965B] bg-[#B9965B]/10 text-[#1C1814] font-semibold"
+                            : "border-[#B9965B]/15 bg-[#FAF7F2]/40 text-[#1C1814]/60 hover:border-[#B9965B]/30"
                         }`}
                       >
                         <span className="block font-semibold uppercase tracking-widest">{tier.name}</span>
@@ -227,8 +227,8 @@ export default function Experiences({ onOpenConsultation }: ExperiencesProps) {
                         onClick={() => setEstimateProximity(prox.id as any)}
                         className={`text-left p-3 border text-xs tracking-wider transition-all duration-300 ${
                           estimateProximity === prox.id
-                            ? "border-[#B9965B] bg-[#B9965B]/10 text-[#F4EFE7]"
-                            : "border-white/10 bg-transparent text-[#F4EFE7]/50 hover:border-white/20"
+                            ? "border-[#B9965B] bg-[#B9965B]/10 text-[#1C1814] font-semibold"
+                            : "border-[#B9965B]/15 bg-[#FAF7F2]/40 text-[#1C1814]/60 hover:border-[#B9965B]/30"
                         }`}
                       >
                         <span className="block font-semibold uppercase tracking-widest">{prox.name}</span>
@@ -254,8 +254,8 @@ export default function Experiences({ onOpenConsultation }: ExperiencesProps) {
                         onClick={() => setEstimateSeason(szn.id as any)}
                         className={`text-left p-3 border text-xs tracking-wider transition-all duration-300 ${
                           estimateSeason === szn.id
-                            ? "border-[#B9965B] bg-[#B9965B]/10 text-[#F4EFE7]"
-                            : "border-white/10 bg-transparent text-[#F4EFE7]/50 hover:border-white/20"
+                            ? "border-[#B9965B] bg-[#B9965B]/10 text-[#1C1814] font-semibold"
+                            : "border-[#B9965B]/15 bg-[#FAF7F2]/40 text-[#1C1814]/60 hover:border-[#B9965B]/30"
                         }`}
                       >
                         <span className="block font-semibold uppercase tracking-widest">{szn.name}</span>
@@ -277,20 +277,20 @@ export default function Experiences({ onOpenConsultation }: ExperiencesProps) {
                   <div className="flex items-center gap-6">
                     <button
                       onClick={() => setGroupSize(Math.max(1, groupSize - 1))}
-                      className="w-10 h-10 border border-white/20 text-[#F4EFE7] hover:border-[#B9965B] text-lg font-mono flex items-center justify-center bg-transparent transition-colors"
+                      className="w-10 h-10 border border-[#B9965B]/30 text-[#1C1814] hover:border-[#B9965B] hover:bg-[#B9965B]/5 text-lg font-mono flex items-center justify-center bg-transparent transition-colors"
                     >
                       -
                     </button>
-                    <span className="text-2xl font-mono text-[#F4EFE7] font-semibold tracking-widest w-6 text-center">
+                    <span className="text-2xl font-mono text-[#1C1814] font-semibold tracking-widest w-6 text-center">
                       {groupSize}
                     </span>
                     <button
                       onClick={() => setGroupSize(Math.min(12, groupSize + 1))}
-                      className="w-10 h-10 border border-white/20 text-[#F4EFE7] hover:border-[#B9965B] text-lg font-mono flex items-center justify-center bg-transparent transition-colors"
+                      className="w-10 h-10 border border-[#B9965B]/30 text-[#1C1814] hover:border-[#B9965B] hover:bg-[#B9965B]/5 text-lg font-mono flex items-center justify-center bg-transparent transition-colors"
                     >
                       +
                     </button>
-                    <span className="text-xs text-[#F4EFE7]/50 font-sans tracking-wide">
+                    <span className="text-xs text-[#1C1814]/60 font-sans tracking-wide">
                       Pilgrims in private suite group
                     </span>
                   </div>
@@ -308,18 +308,18 @@ export default function Experiences({ onOpenConsultation }: ExperiencesProps) {
                         <button
                           key={ad.id}
                           onClick={() => handleToggleAddon(ad.id)}
-                          className="w-full flex items-start gap-3 p-2.5 border border-white/5 bg-black/60 hover:border-white/10 transition-all text-left group"
+                          className="w-full flex items-start gap-3 p-2.5 border border-[#B9965B]/15 bg-white hover:border-[#B9965B]/30 transition-all text-left shadow-sm group"
                         >
                           <div className={`mt-0.5 w-4 h-4 border flex items-center justify-center transition-colors duration-300 ${
-                            selected ? "border-[#B9965B] bg-[#B9965B]" : "border-white/20 bg-transparent"
+                            selected ? "border-[#B9965B] bg-[#B9965B]" : "border-[#B9965B]/30 bg-transparent"
                           }`}>
-                            {selected && <Check size={10} className="text-black stroke-[3px]" />}
+                            {selected && <Check size={10} className="text-white stroke-[3px]" />}
                           </div>
                           <div className="space-y-0.5">
-                            <span className="text-[11px] font-sans font-medium text-[#F4EFE7] block tracking-wide">
+                            <span className="text-[11px] font-sans font-medium text-[#1C1814] block tracking-wide">
                               {ad.label}
                             </span>
-                            <span className="text-[9px] font-sans font-light text-[#F4EFE7]/40 block leading-tight">
+                            <span className="text-[9px] font-sans font-light text-[#1C1814]/55 block leading-tight">
                               {ad.desc}
                             </span>
                           </div>
@@ -332,12 +332,12 @@ export default function Experiences({ onOpenConsultation }: ExperiencesProps) {
             </div>
 
             {/* Right Output Sum Calculations */}
-            <div className="lg:col-span-4 border border-[#B9965B]/30 p-8 space-y-8 bg-[#0c0c0c] text-center flex flex-col justify-between h-full relative">
+            <div className="lg:col-span-4 border border-[#B9965B]/35 p-8 space-y-8 bg-[#FAF7F2] text-center flex flex-col justify-between h-full relative shadow-md">
               <div className="space-y-4">
                 <span className="text-[10px] tracking-[0.2em] font-sans text-[#B9965B] font-semibold block uppercase">
                   ESTIMANT QUOTATION
                 </span>
-                <p className="text-[10px] uppercase font-sans tracking-[0.15em] text-[#F4EFE7]/50 max-w-xs mx-auto">
+                <p className="text-[10px] uppercase font-sans tracking-[0.15em] text-[#1C1814]/60 max-w-xs mx-auto">
                   Fully bespoke luxury pricing based on sovereign specifications
                 </p>
                 
@@ -346,13 +346,13 @@ export default function Experiences({ onOpenConsultation }: ExperiencesProps) {
 
               {/* Dynamic Cost Counter */}
               <div className="space-y-2.5 py-4">
-                <span className="text-4xl sm:text-5xl font-mono text-[#F4EFE7] tracking-wider block font-light">
+                <span className="text-4xl sm:text-5xl font-mono text-[#1C1814] tracking-wider block font-light">
                   ${calculateEstimateValue().toLocaleString()}
                 </span>
                 <span className="text-[9px] tracking-[0.2em] text-[#B9965B] font-sans block">
                   ESTIMATION VALUE (USD)
                 </span>
-                <span className="text-[8px] text-[#F4EFE7]/30 font-sans block">
+                <span className="text-[8px] text-[#1C1814]/50 font-sans block">
                   ALL HOTEL INCLUSIONS & INTERNAL TRANSPORT COMPREHENSIVE
                 </span>
               </div>
@@ -360,13 +360,13 @@ export default function Experiences({ onOpenConsultation }: ExperiencesProps) {
               {/* Submit to Concierge Call Trigger */}
               <button
                 onClick={handleReserveCuratedPath}
-                className="w-full bg-[#B9965B] text-black hover:bg-[#8C6F3E] font-semibold tracking-[0.25em] py-4 text-xs font-sans transition-all duration-300 flex items-center justify-center gap-2 group cursor-pointer"
+                className="w-full bg-[#B9965B] text-white hover:bg-[#8C6F3E] font-semibold tracking-[0.25em] py-4 text-xs font-sans transition-all duration-300 flex items-center justify-center gap-2 group cursor-pointer"
               >
                 RESERVE THIS CURATION
-                <ArrowRight size={12} className="text-black transition-transform group-hover:translate-x-1" />
+                <ArrowRight size={12} className="text-white transition-transform group-hover:translate-x-1" />
               </button>
 
-              <div className="flex items-center justify-center gap-1.5 text-[8px] tracking-wide font-sans text-white/30">
+              <div className="flex items-center justify-center gap-1.5 text-[8px] tracking-wide font-sans text-[#1C1814]/40">
                 <Shield size={10} className="text-[#B9965B]" />
                 ENCRYPTED & GUARANTEED MAXIMUM DISCRETION
               </div>

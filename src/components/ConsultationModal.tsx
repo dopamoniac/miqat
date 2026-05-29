@@ -76,19 +76,19 @@ export default function ConsultationModal({ isOpen, onClose, packageNamePreset }
   };
 
   return (
-    <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/98 backdrop-blur-md animate-fade-in overflow-y-auto">
+    <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/85 backdrop-blur-md animate-fade-in overflow-y-auto">
       
       {/* Absolute Close button */}
       <button
         onClick={onClose}
-        className="absolute top-6 right-8 text-[#F4EFE7]/50 hover:text-white p-2 transition-colors duration-300 z-10"
+        className="absolute top-6 right-8 text-white/60 hover:text-white p-2 transition-colors duration-300 z-10 cursor-pointer"
         aria-label="Close form"
       >
         <X size={24} strokeWidth={1} />
       </button>
 
       {/* Main Board Container */}
-      <div className="w-full max-w-2xl bg-[#0c0c0c] border border-[#B9965B]/30 p-8 sm:p-12 relative my-12 shadow-2xl">
+      <div className="w-full max-w-2xl bg-[#FAF7F2] border border-[#B9965B]/40 p-8 sm:p-12 relative my-12 shadow-2xl">
         
         {/* Decorative corner borders */}
         <div className="absolute top-0 left-0 w-4 h-4 border-t border-l border-[#B9965B]" />
@@ -98,12 +98,12 @@ export default function ConsultationModal({ isOpen, onClose, packageNamePreset }
 
         {/* 1. Loader Submitting State */}
         {isSubmitting && (
-          <div className="py-24 text-center space-y-6 flex flex-col items-center justify-center">
+          <div className="py-24 text-center space-y-6 flex flex-col items-center justify-center font-sans">
             <span className="w-12 h-12 border-2 border-[#B9965B]/20 border-t-[#B9965B] rounded-full animate-spin block" />
             <h3 className="text-sm font-sans tracking-[0.25em] text-[#B9965B] uppercase font-semibold">
               ANCHORING SECURE ENCRYPTED CHANNELS
             </h3>
-            <p className="text-xs text-[#F4EFE7]/40 max-w-xs font-light">
+            <p className="text-xs text-[#1C1814]/50 max-w-xs font-light">
               We are broadcasting your spiritual intent to our Senior Butler at Ritz-Carlton Mecca residence.
             </p>
           </div>
@@ -111,7 +111,7 @@ export default function ConsultationModal({ isOpen, onClose, packageNamePreset }
 
         {/* 2. Success Devotional Docket State */}
         {isCompleted && !isSubmitting && (
-          <div className="py-8 space-y-8 text-center flex flex-col items-center">
+          <div className="py-8 space-y-8 text-center flex flex-col items-center font-sans">
             <span className="text-[#B9965B] p-4 border border-[#B9965B]/30 rounded-full animate-pulse">
               <Crown size={32} strokeWidth={1} />
             </span>
@@ -120,33 +120,33 @@ export default function ConsultationModal({ isOpen, onClose, packageNamePreset }
               <span className="text-[10px] tracking-[0.3em] font-sans font-semibold text-[#B9965B] block uppercase">
                 RESERVATION RECEIVED
               </span>
-              <h3 className="text-xl font-serif text-[#F4EFE7] tracking-wider uppercase">
+              <h3 className="text-xl font-serif text-[#1C1814] tracking-wider uppercase">
                 May Peace be Upon Your Path.
               </h3>
-              <p className="text-xs text-[#F4EFE7]/60 max-w-md mx-auto font-sans font-style leading-relaxed leading-[1.6]">
+              <p className="text-xs text-[#1C1814]/70 max-w-md mx-auto font-sans leading-relaxed">
                 Our Senior Concierge Butler is reviewing your coordinates of intent. You will receive an encrypted text summary and direct priority phone callback within <strong>15 minutes</strong>.
               </p>
             </div>
 
             {/* Receipt Table */}
-            <div className="w-full border border-white/5 bg-[#050505] p-6 text-left space-y-4 font-sans text-xs tracking-wider">
-              <div className="flex justify-between items-center border-b border-white/5 pb-3">
-                <span className="text-[#F4EFE7]/40 uppercase text-[9px]">RESERVATION ID:</span>
+            <div className="w-full border border-[#B9965B]/15 bg-white p-6 text-left space-y-4 font-sans text-xs tracking-wider shadow-sm">
+              <div className="flex justify-between items-center border-b border-[#B9965B]/15 pb-3">
+                <span className="text-[#1C1814]/50 uppercase text-[9px]">RESERVATION ID:</span>
                 <span className="font-mono font-bold text-[#B9965B] text-sm">{reservationId}</span>
               </div>
-              <div className="flex justify-between items-center border-b border-white/5 pb-3">
-                <span className="text-[#F4EFE7]/40 uppercase text-[9px]">PILGRIM OF INTENT:</span>
-                <span className="text-[#F4EFE7]">{formData.fullName}</span>
+              <div className="flex justify-between items-center border-b border-[#B9965B]/15 pb-3">
+                <span className="text-[#1C1814]/50 uppercase text-[9px]">PILGRIM OF INTENT:</span>
+                <span className="text-[#1C1814]">{formData.fullName}</span>
               </div>
-              <div className="flex justify-between items-center border-b border-white/5 pb-3">
-                <span className="text-[#F4EFE7]/40 uppercase text-[9px]">SELECTED TIER FRAMEWORD:</span>
-                <span className="text-[#F4EFE7] font-semibold uppercase font-sans text-[11px] text-[#B9965B]">
+              <div className="flex justify-between items-center border-b border-[#B9965B]/15 pb-3">
+                <span className="text-[#1C1814]/50 uppercase text-[9px]">SELECTED TIER FRAMEWORK:</span>
+                <span className="text-[#1C1814] font-semibold uppercase font-sans text-[11px] text-[#B9965B]">
                   {formData.packagePreference}
                 </span>
               </div>
               <div className="flex justify-between items-center">
-                <span className="text-[#F4EFE7]/40 uppercase text-[9px]">ASSISTANCE ASSIGNED:</span>
-                <span className="text-[#F4EFE7] flex items-center gap-1">
+                <span className="text-[#1C1814]/50 uppercase text-[9px]">ASSISTANCE ASSIGNED:</span>
+                <span className="text-[#1C1814] flex items-center gap-1">
                   <Heart size={10} className="text-[#B9965B]" />
                   VIP Elder Care Elite Team
                 </span>
@@ -159,7 +159,7 @@ export default function ConsultationModal({ isOpen, onClose, packageNamePreset }
                 setStep(1);
                 onClose();
               }}
-              className="bg-[#B9965B] hover:bg-[#8C6F3E] text-black px-8 py-3.5 text-xs font-semibold tracking-[0.25em]"
+              className="bg-[#B9965B] hover:bg-[#8C6F3E] text-white px-8 py-3.5 text-xs font-semibold tracking-[0.25em] cursor-pointer"
             >
               RETURN TO SANCTUARY
             </button>
@@ -175,18 +175,18 @@ export default function ConsultationModal({ isOpen, onClose, packageNamePreset }
               <span className="text-[10px] tracking-[0.3em] font-sans font-semibold text-[#B9965B] block uppercase">
                 PRIVATE PORTAL &mdash; PORTRAIT OF INTENT
               </span>
-              <h2 className="text-2xl sm:text-3xl font-serif text-[#F4EFE7] tracking-wider leading-none">
-                Begin Your <span className="italic font-light text-gold-gradient">Sacred Curation</span>
+              <h2 className="text-2xl sm:text-3xl font-serif text-[#1C1814] tracking-wider leading-none">
+                Begin Your <span className="italic font-light text-[#B9965B]">Sacred Curation</span>
               </h2>
               <div className="h-px bg-[#B9965B]/20 w-16 mx-auto sm:mx-0 pt-2" />
             </div>
 
             {/* Step Progress indicators */}
-            <div className="flex items-center justify-between text-[10px] font-mono tracking-widest text-[#F4EFE7]/30">
+            <div className="flex items-center justify-between text-[10px] font-mono tracking-widest text-[#1C1814]/40">
               <span className={step === 1 ? "text-[#B9965B] font-bold" : ""}>01 COORDINATES</span>
-              <span className="h-px flex-grow bg-white/5 mx-4" />
+              <span className="h-px flex-grow bg-[#B9965B]/20 mx-4" />
               <span className={step === 2 ? "text-[#B9965B] font-bold" : ""}>02 PILGRIMAGE PRESET</span>
-              <span className="h-px flex-grow bg-white/5 mx-4" />
+              <span className="h-px flex-grow bg-[#B9965B]/20 mx-4" />
               <span className={step === 3 ? "text-[#B9965B] font-bold" : ""}>03 DISCRETION</span>
             </div>
 
@@ -204,7 +204,7 @@ export default function ConsultationModal({ isOpen, onClose, packageNamePreset }
                     value={formData.fullName}
                     onChange={(e) => setFormData({ ...formData, fullName: e.target.value })}
                     placeholder="E.g., Al-Farabi Bin Abdul-Aziz"
-                    className="w-full bg-[#050505] border border-white/10 p-4 text-xs tracking-wider text-[#F4EFE7] focus:border-[#B9965B] outline-none transition-colors"
+                    className="w-full bg-white border border-[#B9965B]/35 p-4 text-xs tracking-wider text-[#1C1814] focus:border-[#B9965B] outline-none transition-colors"
                   />
                 </div>
 
@@ -220,7 +220,7 @@ export default function ConsultationModal({ isOpen, onClose, packageNamePreset }
                       value={formData.email}
                       onChange={(e) => setFormData({ ...formData, email: e.target.value })}
                       placeholder="e.g., binaziz@royal-consulate.com"
-                      className="w-full bg-[#050505] border border-white/10 p-4 text-xs tracking-wider text-[#F4EFE7] focus:border-[#B9965B] outline-none transition-colors"
+                      className="w-full bg-white border border-[#B9965B]/35 p-4 text-xs tracking-wider text-[#1C1814] focus:border-[#B9965B] outline-none transition-colors"
                     />
                   </div>
 
@@ -232,7 +232,7 @@ export default function ConsultationModal({ isOpen, onClose, packageNamePreset }
                       <select
                         value={formData.whatsappCode}
                         onChange={(e) => setFormData({ ...formData, whatsappCode: e.target.value })}
-                        className="bg-[#050505] border border-white/10 p-4 text-xs text-[#F4EFE7] focus:border-[#B9965B] outline-none"
+                        className="bg-white border border-[#B9965B]/35 p-4 text-xs text-[#1C1814] focus:border-[#B9965B] outline-none"
                       >
                         <option value="+44">+44 (UK)</option>
                         <option value="+966">+966 (KSA)</option>
@@ -247,7 +247,7 @@ export default function ConsultationModal({ isOpen, onClose, packageNamePreset }
                         value={formData.phone}
                         onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
                         placeholder="7123 456789"
-                        className="w-full bg-[#050505] border border-white/10 p-4 text-xs tracking-wider text-[#F4EFE7] focus:border-[#B9965B] outline-none transition-colors flex-grow"
+                        className="w-full bg-white border border-[#B9965B]/35 p-4 text-xs tracking-wider text-[#1C1814] focus:border-[#B9965B] outline-none transition-colors flex-grow"
                       />
                     </div>
                   </div>
@@ -257,10 +257,10 @@ export default function ConsultationModal({ isOpen, onClose, packageNamePreset }
                   <button
                     type="button"
                     onClick={handleNextStep}
-                    className="bg-[#B9965B] text-black hover:bg-[#8C6F3E] text-xs font-semibold tracking-[0.25em] py-4 px-8 flex items-center gap-2 group cursor-pointer"
+                    className="bg-[#B9965B] text-white hover:bg-[#8C6F3E] text-xs font-semibold tracking-[0.25em] py-4 px-8 flex items-center gap-2 group cursor-pointer"
                   >
                     SELECT PATH DETAILS
-                    <ArrowRight size={12} className="text-black transition-transform group-hover:translate-x-1" />
+                    <ArrowRight size={12} className="text-white transition-transform group-hover:translate-x-1" />
                   </button>
                 </div>
               </div>
@@ -279,7 +279,7 @@ export default function ConsultationModal({ isOpen, onClose, packageNamePreset }
                       id="packagePreference"
                       value={formData.packagePreference}
                       onChange={(e) => setFormData({ ...formData, packagePreference: e.target.value })}
-                      className="w-full bg-[#050505] border border-white/10 p-4 text-xs text-[#F4EFE7] focus:border-[#B9965B] outline-none tracking-wider"
+                      className="w-full bg-white border border-[#B9965B]/35 p-4 text-xs text-[#1C1814] focus:border-[#B9965B] outline-none tracking-wider"
                     >
                       <option value="Signature Umrah Frame">Signature Umrah (5★ Frontline Suite)</option>
                       <option value="Royal Hajj Framework">Royal Hajj Framework (Mina Sovereign Tents)</option>
@@ -297,7 +297,7 @@ export default function ConsultationModal({ isOpen, onClose, packageNamePreset }
                       id="travelDate"
                       value={formData.travelDate}
                       onChange={(e) => setFormData({ ...formData, travelDate: e.target.value })}
-                      className="w-full bg-[#050505] border border-white/10 p-4 text-xs text-[#F4EFE7] focus:border-[#B9965B] outline-none tracking-wider"
+                      className="w-full bg-white border border-[#B9965B]/35 p-4 text-xs text-[#1C1814] focus:border-[#B9965B] outline-none tracking-wider"
                     >
                       <option value="Ramadan (Holy Peak Season)">Ramadan (Peak Sacred Devotion)</option>
                       <option value="Dhul Hijjah (Hajj Period)">Dhul-Hijjah (Hajj Ritual Sequence)</option>
@@ -324,15 +324,15 @@ export default function ConsultationModal({ isOpen, onClose, packageNamePreset }
                           onClick={() => setFormData({ ...formData, groupSize: numOption === "6+" ? 6 : (numOption as number) })}
                           className={`w-12 h-12 border text-xs font-mono font-bold transition-all duration-300 ${
                             isSelected
-                              ? "border-[#B9965B] bg-[#B9965B]/10 text-white"
-                              : "border-white/10 bg-transparent text-[#F4EFE7]/50 hover:border-white/25"
+                              ? "border-[#B9965B] bg-[#B9965B]/10 text-[#1C1814]"
+                              : "border-[#B9965B]/30 bg-white text-[#1C1814]/60 hover:border-[#B9965B]/50 cursor-pointer"
                           }`}
                         >
                           {numOption}
                         </button>
                       );
                     })}
-                    <span className="text-[10px] text-white/40 tracking-wide font-sans pl-2">
+                    <span className="text-[10px] text-[#1C1814]/50 tracking-wide font-sans pl-2">
                       Custom suites tailored to sizes
                     </span>
                   </div>
@@ -342,17 +342,17 @@ export default function ConsultationModal({ isOpen, onClose, packageNamePreset }
                   <button
                     type="button"
                     onClick={handlePrevStep}
-                    className="border border-white/20 text-[#F4EFE7]/70 hover:text-white text-xs font-semibold tracking-[0.25em] py-4 px-8"
+                    className="border border-[#B9965B]/30 text-[#1C1814]/75 hover:bg-[#B9965B]/5 text-xs font-semibold tracking-[0.25em] py-4 px-8 cursor-pointer"
                   >
                     BACK
                   </button>
                   <button
                     type="button"
                     onClick={handleNextStep}
-                    className="bg-[#B9965B] text-black hover:bg-[#8C6F3E] text-xs font-semibold tracking-[0.25em] py-4 px-8 flex items-center gap-2 group"
+                    className="bg-[#B9965B] text-white hover:bg-[#8C6F3E] text-xs font-semibold tracking-[0.25em] py-4 px-8 flex items-center gap-2 group cursor-pointer"
                   >
                     PROCEED TO DISCRETION
-                    <ArrowRight size={12} className="text-black transition-transform group-hover:translate-x-1" />
+                    <ArrowRight size={12} className="text-white transition-transform group-hover:translate-x-1" />
                   </button>
                 </div>
               </div>
@@ -371,21 +371,21 @@ export default function ConsultationModal({ isOpen, onClose, packageNamePreset }
                     value={formData.specialRequests}
                     onChange={(e) => setFormData({ ...formData, specialRequests: e.target.value })}
                     placeholder="We provide executive wheelchair escorts during Tawaf, private pediatric and mobility nurses, private chefs, or dedicated language translators. List any specifications here."
-                    className="w-full bg-[#050505] border border-white/10 p-4 text-xs tracking-wider text-[#F4EFE7] focus:border-[#B9965B] outline-none transition-colors"
+                    className="w-full bg-white border border-[#B9965B]/35 p-4 text-xs tracking-wider text-[#1C1814] focus:border-[#B9965B] outline-none transition-colors"
                   />
                 </div>
 
                 {/* Privacy checkbox */}
-                <div className="flex items-start gap-3 bg-black/50 p-4 border border-white/5">
+                <div className="flex items-start gap-3 bg-white p-4 border border-[#B9965B]/15 shadow-sm">
                   <input
                     id="privacyCheck"
                     type="checkbox"
                     required
                     checked={formData.agreeToPrivacy}
                     onChange={(e) => setFormData({ ...formData, agreeToPrivacy: e.target.checked })}
-                    className="mt-1 accent-[#B9965B]"
+                    className="mt-1 accent-[#B9965B] cursor-pointer"
                   />
-                  <label htmlFor="privacyCheck" className="text-[10px] text-[#F4EFE7]/50 font-sans tracking-wide leading-relaxed cursor-pointer select-none">
+                  <label htmlFor="privacyCheck" className="text-[10px] text-[#1C1814]/60 font-sans tracking-wide leading-relaxed cursor-pointer select-none">
                     I agree to the <strong>Miqat Sovereign Integrity & Privacy Accord</strong>. I understand my telemetry details, phone digits, and destination requirements are kept completely confidential and encrypted under diplomatic parameters.
                   </label>
                 </div>
@@ -394,23 +394,23 @@ export default function ConsultationModal({ isOpen, onClose, packageNamePreset }
                   <button
                     type="button"
                     onClick={handlePrevStep}
-                    className="border border-white/20 text-[#F4EFE7]/70 hover:text-white text-xs font-semibold tracking-[0.25em] py-4 px-8"
+                    className="border border-[#B9965B]/30 text-[#1C1814]/75 hover:bg-[#B9965B]/5 text-xs font-semibold tracking-[0.25em] py-4 px-8 cursor-pointer"
                   >
                     BACK
                   </button>
                   <button
                     type="submit"
-                    className="bg-[#B9965B] text-black hover:bg-[#8C6F3E] text-xs font-semibold tracking-[0.25em] py-4 px-8 flex items-center gap-2 group"
+                    className="bg-[#B9965B] text-white hover:bg-[#8C6F3E] text-xs font-semibold tracking-[0.25em] py-4 px-8 flex items-center gap-2 group cursor-pointer"
                   >
                     BROADCAST PORTRAIT
-                    <Check size={12} className="text-black stroke-[3px]" />
+                    <Check size={12} className="text-white stroke-[3px]" />
                   </button>
                 </div>
               </div>
             )}
 
             {/* Privacy note */}
-            <div className="flex items-center justify-center gap-2 text-[8px] tracking-widest text-[#F4EFE7]/30 font-sans text-center pt-2">
+            <div className="flex items-center justify-center gap-2 text-[8px] tracking-widest text-[#1C1814]/40 font-sans text-center pt-2">
               <ShieldCheck size={11} className="text-[#B9965B]" />
               SECURED BY DIPLOMATIC HIGH TIER SSL &bull; NO MARKETING SPAM GUARANTEED
             </div>
