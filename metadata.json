@@ -1,0 +1,6 @@
+{
+  "name": "Miqat Luxury Hajj & Umrah",
+  "description": "An ultra-luxury, high-end cinematic digital platform for Miqat Hajj & Umrah experiences, featuring an elegant, sacred, art-directed editorial interface.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
